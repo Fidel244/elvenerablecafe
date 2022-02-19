@@ -34,7 +34,7 @@ def registrar_venta(request):
     return redirect("/")
 
 def ver_articulos(request):
-    articulos = articulo.objects.all()
+    articulos = articulo.objects.order_by("nombre")
     return render(request, "articulos.html", {"articulos":articulos})
 
 def ver_ventas(request):
