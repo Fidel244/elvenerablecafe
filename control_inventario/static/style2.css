@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+h2{
+    color: aliceblue;
+    cursor: default;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh;
+    background-color: black;
+}
+
+img{
+    margin: 0.5%;
+}
+
+.menu{
+
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(44, 44, 49);
+}
+a{
+    margin: 15px;
+    outline: none;
+
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    background-color: white;
+
+    box-shadow:  inset 0 0 0 0 black;
+    font-size: 1rem;
+    transition: ease-out 0.4s;
+    outline: none;
+    border: none;
+    z-index: 1;
+    position: relative;
+}
+
+button:hover{
+    box-shadow: inset 200px 0 0 0 black;
+    color: white;
+}
+
+/*
+button:before{
+    transition:  0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: black;
+}
+
+button:hover:before{
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}*/
+
+#registrar{
+
+    display: none;
+}
+
+#agregar{
+    display: none;
+}
+
+.item-form{
+    /* margin: 10% auto;*/
+    margin:4% auto;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+ 
+ }
+
+input{
+    font-size: 15px;
+}
+
+.item-form button{
+    height: 30px;
+}

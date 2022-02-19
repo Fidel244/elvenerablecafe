@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El venerable café</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="icon" href="{% static 'venerable.png' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'venerable.png' %}" width="170px" alt="">
+        <h2>Control de inventario</h2>
+    </header>
+    <div id="principal" class="menu">
+        <a href="/ver_articulos">
+            <button  type="button">Ver inventario</button>
+        </a>
+        <a >
+            <button id="boton_agregar" type="button" >Agregar artículo</button>
+        </a>
+        <a href="/ver_ventas">
+            <button type="button">Ver ventas</button>
+        </a>
+        <a >
+            <button id="boton_registrar" type="button" onclick="mostrar_form2()">Registrar venta</button>
+        </a>
+    </div>
+    <div id="agregar" class="menu">
+        <form action="/agregar" method="POST">
+                {% csrf_token %}
+                <div class="item-form">
+                    <input type="text" id="nombre" name="nombre" autocomplete="off" style="width: 300px" placeholder="Nombre del artículo a agregar">
+                </div>
+                <div class="item-form">
+                    <input type="number" id="cantidad" name="cantidad" autocomplete="off" style="width: 80px" placeholder="Cantidad">
+                </div>
+                <div class="item-form">
+                    <input type="number" id="precio"  name="precio" autocomplete="off" style="width: 80px" placeholder="Precio">
+                </div>
+                <div class="item-form">
+                    <button type="submit">Agregar artículo</button>
+                </div>
+                <div class="item-form">
+                    <button id="volver1" type="button">Volver al menú</button>
+                </div>
+            </form>
+    </div>
+    <div id="registrar" class="menu">
+        <form action="/registrar" method="POST">
+            {% csrf_token %}
+            <div class="item-form">
+                <input type="text" id="nombre" name="nombre" autocomplete="off" style="width: 300px" placeholder="Nombre del artículo vendido">
+            </div>
+            <div class="item-form">
+                <input type="number" id="cantidad" name="cantidad" autocomplete="off" style="width: 80px" placeholder="Cantidad vendida">
+            </div>
+            <div class="item-form">
+                <button type="submit">Registrar venta</button>
+            </div>
+            <div class="item-form">
+                <button id="volver2" type="button">Volver al menú</button>
+            </div>
+        </form>
+    </div>
+    <div class="cita">
+        <h2>"Un hombre auténtico tiene como ideal moral hacer el bien" - Dr. José Gregorio Hernandez</h2>
+    </div>
+    
+
+    <script src="{% static 'app.js' %}"></script>
+</body>
+</html>
