@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ventas</title>
+    <title>Reporte semanal</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="icon" href="{% static 'venerable.png' %}">
 </head>
 <body>
     <header>
         <img src="{% static 'venerable.png' %}" width="170px" alt="">
-        <h2>Control de inventario</h2>
+        <h2>Reporte semanal</h2>
     </header>
     
     <div class="seccion" style="background-color: rgb(44, 44, 49);; height: 100%; width: 100%; margin-top: 2%;">
@@ -20,18 +20,16 @@
         
         <table style="font-weight: bold; color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 20px;">
             <tr>
-                <td>Fecha</td>
-                <td>Nombre</td>
-                <td>Cantidad vendida</td>
+                <td>Nombre del artículo</td>
+                <td>Cantidad total de unidades vendidas</td>
                 <td>Ganancia</td>
             </tr>
 
         
-        {% for i in ventas %}
+        {% for i in objetos %}
         <tr>
-            <td><span>{{ i.fecha }} </span> </td>
-            <td><span>{{ i.nombre_articulo_vendido}} </span></td>
-            <td><span>{{ i.unidades_vendidas}} unid </span></td>
+            <td><span>{{ i.nombre }} </span> </td>
+            <td><span>{{ i.cantidad}} </span></td>
             <td><span>{{ i.ganancia}} $ </span></td>
         </tr>
         {% endfor  %}

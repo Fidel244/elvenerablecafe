@@ -15,30 +15,37 @@
         <h2>Control de inventario</h2>
     </header>
     <div id="principal" class="menu">
-        <a href="/ver_articulos">
+        <a href="/ver_articulos" target="_blank">
             <button  type="button">Ver inventario</button>
         </a>
         <a >
             <button id="boton_agregar" type="button" >Agregar artículo</button>
         </a>
-        <a href="/ver_ventas">
-            <button type="button">Ver ventas</button>
-        </a>
         <a >
             <button id="boton_registrar" type="button" onclick="mostrar_form2()">Registrar venta</button>
+        </a>
+        <a href="/ver_ventas" target="_blank">
+            <button type="button">Ver ventas</button>
+        </a>
+
+        <a href="/ver_reporte_semanal" target="_blank">
+            <button type="button">Ver reporte semanal</button>
         </a>
     </div>
     <div id="agregar" class="menu">
         <form action="/agregar" method="POST">
                 {% csrf_token %}
                 <div class="item-form">
-                    <input type="text" id="nombre" name="nombre" autocomplete="off" style="width: 300px" placeholder="Nombre del artículo a agregar">
+                    <input type="text" id="nombre" name="nombre" autocomplete="off" style="width: 400px" placeholder="Nombre del artículo a agregar">
                 </div>
                 <div class="item-form">
                     <input type="number" id="cantidad" name="cantidad" autocomplete="off" style="width: 80px" placeholder="Cantidad">
                 </div>
                 <div class="item-form">
-                    <input type="number" id="precio"  name="precio" autocomplete="off" style="width: 80px" placeholder="Precio">
+                    <input type="text" id="precio"  name="precio" autocomplete="off" style="width: 80px" placeholder="Precio">
+                </div>
+                <div class="item-form">
+                    <input type="text" id="moneda"  name="moneda" autocomplete="off" style="width: 200px" placeholder="Bolivar/Dollar">
                 </div>
                 <div class="item-form">
                     <button type="submit">Agregar artículo</button>
@@ -65,8 +72,9 @@
             </div>
         </form>
     </div>
-    <div class="cita">
+    <div class="cita" style="display: flex; flex-direction: column; align-items: center;">
         <h2>"Un hombre auténtico tiene como ideal moral hacer el bien" - Dr. José Gregorio Hernandez</h2>
+        <h4 style="color: white; margin-top: 2%; cursor: default;">Desarrollado por Fidel Serpa</h4>
     </div>
     
 
