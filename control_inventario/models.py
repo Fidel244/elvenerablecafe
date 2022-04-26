@@ -15,7 +15,7 @@ class venta(models.Model):
     fecha = models.CharField(max_length=70, null=True)
     unidades_vendidas = models.IntegerField(null=True)
     ganancia = models.FloatField(null=True)
-    tasa = models.FloatField(null=True)
+    moneda = models.BooleanField(null=True)
 
     def __str__(self):
         return self.fecha

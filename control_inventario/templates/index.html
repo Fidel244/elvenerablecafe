@@ -19,7 +19,7 @@
             <button  type="button">Ver inventario</button>
         </a>
         <a >
-            <button id="boton_agregar" type="button" >Agregar artículo</button>
+            <button id="boton_agregar" type="button" >Agregar/Eliminar artículo</button>
         </a>
         <a >
             <button id="boton_registrar" type="button" onclick="mostrar_form2()">Registrar venta</button>
@@ -45,10 +45,10 @@
                     <input type="text" id="precio"  name="precio" autocomplete="off" style="width: 80px" placeholder="Precio">
                 </div>
                 <div class="item-form">
-                    <input type="text" id="moneda"  name="moneda" autocomplete="off" style="width: 200px" placeholder="Bolivar/Dollar">
+                    <input type="text" id="moneda"  name="moneda" autocomplete="off" style="width: 200px" placeholder="Bolivar/Dollar o Eliminar">
                 </div>
                 <div class="item-form">
-                    <button type="submit">Agregar artículo</button>
+                    <button type="submit">Realizar operación</button>
                 </div>
                 <div class="item-form">
                     <button id="volver1" type="button">Volver al menú</button>
@@ -60,6 +60,9 @@
             {% csrf_token %}
             <div class="item-form">
                 <input type="text" id="nombre" name="nombre" autocomplete="off" style="width: 300px" placeholder="Nombre del artículo vendido">
+            </div>
+            <div class="item-form">
+                <input type="text" id="fechax" name="fechax" autocomplete="off" style="width: 300px" placeholder="Colocar fecha | es opcional d/m/a">
             </div>
             <div class="item-form">
                 <input type="number" id="cantidad" name="cantidad" autocomplete="off" style="width: 80px" placeholder="Cantidad vendida">

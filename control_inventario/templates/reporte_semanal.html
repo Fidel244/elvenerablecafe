@@ -30,7 +30,11 @@
         <tr>
             <td><span>{{ i.nombre }} </span> </td>
             <td><span>{{ i.cantidad}} </span></td>
+            {% if i.moneda %}
             <td><span>{{ i.ganancia}} $ </span></td>
+            {% else %}
+            <td><span>{{ i.ganancia}} bs </span> </td>
+            {% endif %}
         </tr>
         {% endfor  %}
         </div>

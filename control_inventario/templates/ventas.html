@@ -32,7 +32,11 @@
             <td><span>{{ i.fecha }} </span> </td>
             <td><span>{{ i.nombre_articulo_vendido}} </span></td>
             <td><span>{{ i.unidades_vendidas}} unid </span></td>
-            <td><span>{{ i.ganancia}} $ </span></td>
+            {% if i.moneda %}
+            <td><span>{{ i.ganancia}} $</span></td>
+            {% else %}
+            <td><span>{{ i.ganancia}} bs </span> </td>
+            {% endif %}
         </tr>
         {% endfor  %}
         </div>

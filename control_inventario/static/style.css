@@ -38,7 +38,6 @@ table{
     margin: auto;
 }
 .menu{
-
     transform-style: preserve-3d;
     display: flex;
     flex-direction: column;
@@ -49,14 +48,13 @@ table{
     background-color: rgb(44, 44, 49);
 }
 a{
-    margin: 15px;
+    margin: auto;
     outline: none;
-
 }
 
 button{
-    width: 15vw;
-    height: 5vh;
+    width: 16vw;
+    height: 30px;
     cursor: pointer;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
@@ -67,35 +65,14 @@ button{
     transition: ease-out 0.4s;
     outline: none;
     border: none;
-    z-index: 1;
     position: relative;
 }
 
 button:hover{
-    box-shadow: inset 15vw 0 0 0 black;
+    box-shadow: inset 16vw 0 0 0.01px black;
     color: white;
 }
 
-/*
-button:before{
-    transition:  0.5s all ease;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    right: 50%;
-    bottom: 0;
-    opacity: 0;
-    content: "";
-    background-color: black;
-}
-
-button:hover:before{
-    transition: 0.5s all ease;
-    left: 0;
-    right: 0;
-    opacity: 1;
-    z-index: -1;
-}*/
 
 #registrar{
 
